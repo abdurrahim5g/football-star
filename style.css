@@ -260,6 +260,9 @@ main.main-content .container {
   margin: 20px 0 10px;
   display: block;
 }
+.single-match h3 a:hover {
+  color: var(--hover-color);
+}
 
 .single-match p {
   color: var(--text-color);
