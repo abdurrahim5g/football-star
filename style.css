@@ -2,7 +2,22 @@
 * Author Name: Abdur Rahim
 * Author URI: https://www.facebook.com/devrahim26
 */
+
+/* ------------- Google  font --------- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --bg-color: #161616;
+  --border: 1px solid #e8e8e8;
+  --radius: 10px;
+  --hover-color: #dd0000;
+  --active-color: #dd0000;
+  --heading-color: #161616;
+  --heading-white: #fff;
+  --text-color: #4d4d4d;
+  --link-color: #161616;
+  --active-link: var(--active-color);
+}
 
 * {
   margin: 0;
@@ -12,7 +27,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #707070;
+  color: var(--text-color);
   line-height: 1.5;
 }
 
@@ -52,5 +67,202 @@ img {
 a {
   text-decoration: none;
   transition: 0.3s;
+  color: var(--active-link);
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 /* commun styles end */
+
+header.header-area {
+  padding: 60px;
+}
+
+.header-container {
+  background: var(--bg-color);
+  border-radius: 30px;
+  padding: 60px 60px 0 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  gap: 30px;
+}
+
+.header-content {
+  padding-bottom: 60px;
+}
+
+.header-content h1 {
+  font-size: 70px;
+  color: var(--heading-white);
+}
+
+.header-content p {
+  color: var(--heading-white);
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+.header-content a {
+  color: #fff;
+  background: var(--active-color);
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header-content a:hover {
+  background: rgb(255, 255, 255);
+  color: var(--active-color);
+  box-shadow: 4px 5px 0px var(--active-color);
+}
+.header-img img {
+  width: 100%;
+}
+/* header styse end
+=========================> */
+
+main.main-content {
+  padding: 60px 0 100px;
+}
+
+main.main-content .container {
+  display: grid;
+  grid-template-columns: 280px auto;
+  gap: 25px;
+}
+
+.main-content aside nav {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: var(--radius);
+}
+
+.main-content aside nav ul li {
+  margin-top: 30px;
+}
+
+.main-content aside nav ul a {
+  display: block;
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: var(--radius);
+}
+
+.main-content aside nav ul li:first-child {
+  margin: 0;
+}
+
+.main-content aside nav ul a.active,
+.main-content aside nav ul a:hover {
+  background: var(--active-color);
+  color: #fff;
+}
+
+.blog-area,
+.upcoming-match-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.blog-area article {
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+.blog-area article img {
+  width: calc(100% + 2px);
+  margin: -1px -4px 0 -1px;
+  max-width: initial;
+}
+
+.article-body {
+  padding: 20px 15px 15px;
+}
+
+.blog-area article .transfer-btn a {
+  border: 1px solid var(--text-color);
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: var(--text-color);
+  display: inline-block;
+}
+
+.blog-area article h3 {
+  font-size: 16px;
+  margin: 15px 0;
+  line-height: 1.7;
+}
+.blog-area article h3 a {
+  color: var(--link-color);
+}
+.blog-area article h3 a:hover {
+  color: var(--hover-color);
+}
+
+.blog-area article ul {
+  display: flex;
+}
+
+.blog-area article ul li {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 50px;
+  display: none;
+}
+
+.view-all a {
+  background: var(--active-color);
+  color: #fff;
+  display: inline-block;
+  padding: 10px 45px;
+  border-radius: 5px;
+}
+
+.view-all a:hover {
+  box-shadow: 5px 5px 0 var(--link-color);
+}
+/* main styse end
+=========================> */
+
+/* Upcoming match styles
+=============================-> */
+.single-match {
+  text-align: center;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 40px 20px;
+}
+
+.single-match ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-match li {
+  padding: 0 5px;
+  font-weight: 700;
+}
+
+.single-match h3 a {
+  color: var(--heading-color);
+  margin: 20px 0 10px;
+  display: block;
+}
+
+.single-match p {
+  color: var(--text-color);
+}
+/* Upcoming match styles end
+=============================-> */
